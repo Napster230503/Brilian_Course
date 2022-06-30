@@ -35,7 +35,9 @@ nav {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    background: #FFFFFF;  
+    background: #FFFFFF;
+    z-index: 1;
+    border-bottom: 1px solid #48466D;
 }
 
 nav ul {
@@ -100,5 +102,56 @@ a.tbl-biru {
 }
 
 a.tbl-biru:hover {
-    color: #F67280;
+    background: #F67280;
+    text-decoration: none;
+}
+
+a.tbl-pink {
+    background: #F67280 ;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px 20px 15px 20px;
+    color: #FFFFFF;
+    cursor: pointe;
+    font-weight: bold;
+}
+
+a.tbl-pink:hover {
+    background: #522546;
+    text-decoration: none;   
+}
+
+p {
+    margin: 10px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
+}
+
+.tengah {
+    text-align: center;
+    width: 100%;
+}
+
+.anotherprofile {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.brilianplaystore {
+    width: 20%;
+    margin: 0 auto;
+}
+
+.brilianplaystore img {
+    width: 80%;
+    border-radius: 50%;
+}
+
+.brilianplaystore p {
+    font-family: 'comic sans ms';
+    font-weight: 800;
+    font-size: 25px;
+    text-align: center;
+    color: #364F6B;
 }

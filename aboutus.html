@@ -26,6 +26,16 @@ html {
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 8px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+  -webkit-animation: shinyy 4s;
+  -moz-animation: shinyy 4s;
+  animation: shinyy 4s;
+}
+
+.card:hover,
+.card:focus {
+    filter: brightness(110%);
+    box-shadow: rgba(44, 120, 161, 0.45)px 0px 20px 0px;
 }
 
 .about-section {
