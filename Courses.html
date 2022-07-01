@@ -24,7 +24,16 @@
     .card{
         box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
         width: 18rem;
+        border-radius: 4px;
+        background: #fff;
+        box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+        transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+        cursor: pointer;
     }
+    .card:hover{
+     transform: scale(1.05);
+     box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+   }
     .card-img-top{
     display: block;
     width: 55%;
@@ -67,6 +76,7 @@
         </header>
     <div class="container my-5">
     <div class="h1 text-center">What would you like to learn?</div>
+    <hr>
     <div class="row">
         <div class="col-md-4">
           <div class="card mb-2 shadow">
@@ -136,5 +146,47 @@
           </div>
         </div>
       </div>
+
+      
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="card mb-2 shadow">
+            <img class="card-img-top mx-auto mt-4" src="assets/img/typescript.png"
+                 alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title text-center">Typescript</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 clearfix d-none d-md-block">
+          <div class="card mb-2">
+            <img class="card-img-top mx-auto mt-4" src="assets/img/html5.png"
+                 alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title text-center">HTML 5</h4>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 clearfix d-none d-md-block">
+          <div class="card mb-2">
+            <img class="card-img-top mx-auto mt-4" src="assets/img/angularjs.png"
+                 alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title text-center">Angular JS</h4>
+
+
+            </div>
+          </div>
+        </div>
       </div>
+
+      </div>
+      
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
