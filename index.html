@@ -60,7 +60,9 @@
 }
 
 /* Here are just some visual styles. 🖌 */
-
+.titlecard {
+  color: grey;
+}
 .text {
   display: grid;
   place-items: center;  
@@ -80,7 +82,74 @@
   font-size: 2vw;
   color:gainsboro;
 }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
 
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #255acc;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
         </style>
     </head>
     <body id="page-top">
@@ -257,6 +326,123 @@
               <a href="#" class="card-link">Another link</a>
             </div>
           </div> -->
+
+
+          <div class="container">
+            <div class="row g-3">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card text-center" style="width: 18rem;">
+                        <img src="assets/easy to learn.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Easy to Learn</h5>
+                            <p class="card-text">With Brilian you can learn step by step and the material is structured. Feel the learning process become easier!</p>
+                            
+                        </div>
+                    </div>
+                </div>    
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card text-center" style="width: 18rem;">
+                        <img src="assets/beginner friendly.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Beginner Friendly</h5>
+                            <p class="card-text">No matter your experience level, you will learn codes from basic and achieve your goals by starting your first course. </p>
+                           
+                        </div>
+                    </div>
+                </div>    
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card text-center" style="width: 18rem;">
+                        <img src="assets/learn anywhere, anytime.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Learn Anywhere, Anytime</h5>
+                            <p class="card-text">We provide the flexibility of time for you to learn. Choose your best place to learn and start the journey with Brilian.</p>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <br>
+        <div class="container">
+            <div class="row g-3">
+                    <div class="col-lg-8 col-12 col-md-6 d-flex align-items-stretch">
+                        <div class="card mb-3">
+                             <div class="row g-0">
+                               <div class="col-md-4">
+                            <img src="assets/mockup.jpg" class="img-fluid rounded-start" alt="..." style="height:28.7rem; width: auto;">
+                        </div>
+                           <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                              <button type="button" class="btn btn-dark">Get On Google Play Store!</button>
+                            </div>
+                          </div>
+                          </div>
+                    </div>    
+                    </div>
+                <div class="col-4 col-md-4 col-lg-4">
+                    <div class="card text-center" style="width: 18rem;">
+                        <img src="assets/beginner friendly.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Beginner Friendly</h5>
+                            <p class="card-text">No matter your experience level, you will learn codes from basic and achieve your goals by starting your first course. </p>  
+                        </div>
+                    </div>
+                </div>    
+            </div>    
+        </div>
+     </div>
+          
+<div class="about-section">
+    <h1>ABOUT US</h1>
+    <p>Hello all, for all friends who want to learn about IT, 
+      we provide online learning services in BRILIAN.ID .</p>
+    <p>below are us as a team in the preparation of this website, THANK YOU :).</p>
+  </div>
+  
+  <h2 style="text-align:center">Our Team</h2>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="assets/img/Adhisti_Roshandy.jpeg" alt="Jane" style="width:100%">
+        <div class="container">
+          <h3>Adhisti Roshandy</h3>
+          <p class="titlecard">Students from CCIT-FTUI</p>
+          <p>adhistiroshandy808@gmail.com</p>
+          <p><button class="button">Contact Us</button></p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        <img src="assets/img/Fahmi_Alamsyah_N.jpg" alt="Fahmi" style="width:100%">
+        <div class="container">
+          <h3>Fahmi Alamsyah Nugroho</h3>
+          <p class="titlecard">Students from CCIT-FTUI</p>
+          <p>alamsyahfahmi99@gmail.com</p>
+          <p><button class="button">Contact Us</button></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="column">
+      <div class="card">
+        <img src="assets/img/Restuaji_Eliansyah.jpeg" alt="John" style="width:100%">
+        <div class="container">
+          <h3>Restuaji Eliansyah</h3>
+          <p class="titlecard">Students from CCIT-FTUI</p>
+          <p>restuaerestu291@gmail.com</p>
+          <p><button class="button">Contact Us</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
           <script>
             var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 var alertTrigger = document.getElementById('liveAlertBtn')
