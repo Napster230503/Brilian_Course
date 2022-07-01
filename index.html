@@ -58,6 +58,39 @@
   99%   {color: var(--color-3)}
   100%  {color: var(--color-1)}
 }
+.header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: var(--white);
+	box-shadow: var(--box-shadow);
+	z-index: 1000;
+}
+
+.header .flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	padding: 1.5rem 2rem;
+}
+
+.header .flex .logo img {
+	height: 53px;
+}
+
+.header .flex .navbar a {
+	margin-left: 2rem;
+	font-size: 2rem;
+	color: var(--main-color);
+	font-family: 'Goldman', cursive;
+}
+
+.header .flex .navbar a:hover {
+	text-decoration: underline;
+	color: var(--main-color);
+}
 
 /* Here are just some visual styles. 🖌 */
 .titlecard {
@@ -157,11 +190,98 @@ html {
   }
 }
 
+#demo{
+    background: linear-gradient(112deg, #ffffff 50%, antiquewhite 50%);
+    max-width: 900px;
+    margin: auto;
+}
+.carousel-caption {
+    position: initial;
+    z-index: 10;
+    padding: 5rem 8rem;
+    color: rgba(78, 77, 77, 0.856);
+    text-align: center;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 2rem;
+}
+@media(max-width:767px){
+    .carousel-caption {
+        position: initial;
+        z-index: 10;
+        padding: 3rem 2rem;
+        color: rgba(78, 77, 77, 0.856);
+        text-align: center;
+        font-size: 0.7rem;
+        font-style: italic;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+}
+.carousel-caption img{
+    width: 6rem;
+    border-radius: 5rem;
+    margin-top: 2rem;
+}
+@media(max-width:767px){
+    .carousel-caption img{
+        width: 4rem;
+        border-radius: 4rem;
+        margin-top: 1rem;
+    }
+}
+#image-caption{
+    font-style: normal;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+@media(max-width:767px){
+    #image-caption{
+        font-style: normal;
+        font-size: 0.6rem;
+        margin-top: 0.5rem;
+    }
+}
+i{
+    background-color: rgb(223, 56, 89);
+    padding: 1.4rem;
+}
+@media(max-width:767px){
+    i{
+        padding: 0.8rem;
+    }
+}
+.carousel-control-prev{
+    justify-content: flex-start;
+}
+
+.carousel-control-next {
+    justify-content: flex-end;
+}
+.carousel-control-prev,.carousel-control-next{
+    transition: none;
+    opacity: unset;
+}
+.home-testimonial{
+  background-color: #231834;
+  height: 530px}
+
+.home-testimonial h3{
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase}
+.home-testimonial h2{
+  color: white;
+  font-size: 28px;
+  font-weight: 700}
         </style>
     </head>
-    <body id="page-top">
+    <body id="page-top" style="background-color:#F2F3F5;">
       <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg">
           <div class="container">
             <a class="navbar-brand" href="http://127.0.0.1:5500/index.html">
               <img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
@@ -171,13 +291,19 @@ html {
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav justify-content-end">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Active</a>
+                  <a class="nav-link active" aria-current="page" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                  <a class="nav-link" href="Courses.html">Courses</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                  <a class="nav-link" href="#team">Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#team">Team</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#team">Contact</a>
                 </li>
               </ul>
             </div>
@@ -186,8 +312,9 @@ html {
               <a href="auth/register.html"><button class="btn btn-primary me-2 " type="button">Sign Up</button></a>
             </form>
           </nav>
+        </header>
           <!--Background-->
-          <div class="bg-image d-flex justify-content-center align-items-center" style="background-image: url('assets/img/background.png'); height: 80vh;">
+          <div class="bg-image d-flex justify-content-center align-items-center" style="background-image: url('assets/img/background.png'); height: 80vh;" id="home">
             <div class="text">
               <h2 class="title">
                 <span class="title-word title-word-1">Start</span>
@@ -199,8 +326,9 @@ html {
               <a href="auth/register.html"><button type="button" class="btn btn-primary"style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Start Learning Now!</button></a>
             </div>
           </div>
+
           <!-- Carousel -->
-          <div class="container my-5">
+          <div class="container my-5" id="courses">
 
           <!--Carousel Wrapper-->
           <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
@@ -224,8 +352,10 @@ html {
                 <div class="row">
                   <div class="col-md-4">
                     <div class="card mb-2">
+                      <a href="Courses.html">
                       <img class="card-img-top" src="assets/img/java.png"
                            alt="Card image cap">
+                      </a>
                       <div class="card-body">
                         <h4 class="card-title text-center">Java</h4>
                       </div>
@@ -234,8 +364,10 @@ html {
         
                   <div class="col-md-4 clearfix d-none d-md-block">
                     <div class="card mb-2">
+                      <a href="Courses.html">
                       <img class="card-img-top" src="assets/img/javascript.png"
                            alt="Card image cap">
+                      </a>
                       <div class="card-body">
                         <h4 class="card-title text-center">Javascript</h4>
 
@@ -245,8 +377,10 @@ html {
         
                   <div class="col-md-4 clearfix d-none d-md-block">
                     <div class="card mb-2">
+                      <a href="Courses.html">
                       <img class="card-img-top" src="assets/img/mysql.png"
                            alt="Card image cap">
+                      </a>
                       <div class="card-body">
                         <h4 class="card-title text-center">Mysql</h4>
 
@@ -265,8 +399,10 @@ html {
                 <div class="row">
                   <div class="col-md-4">
                     <div class="card mb-2">
+                      <a href="Courses.html">
                       <img class="card-img-top" src="assets/img/android.png"
                            alt="Card image cap">
+                      </a>
                       <div class="card-body">
                         <h4 class="card-title text-center">Android</h4>
 
@@ -277,8 +413,10 @@ html {
         
                   <div class="col-md-4 clearfix d-none d-md-block">
                     <div class="card mb-2">
+                      <a href="Courses.html">
                       <img class="card-img-top" src="assets/img/codeigniter.png"
                            alt="Card image cap">
+                      </a>
                       <div class="card-body">
                         <h4 class="card-title text-center">Codeigniter</h4>
 
@@ -289,8 +427,10 @@ html {
         
                   <div class="col-md-4 clearfix d-none d-md-block">
                     <div class="card mb-2">
+                      <a href="Courses.html">
                       <img class="card-img-top" src="assets/img/git.png"
                            alt="Card image cap">
+                      </a>
                       <div class="card-body">
                         <h4 class="card-title text-center">Git</h4>
 
@@ -401,8 +541,60 @@ html {
             </div>    
         </div>
      </div>
-          
-<div class="about-section">
+          <!-- Testimonial -->
+      <section class="home-testimonial">
+          <div class="container">
+            <div class="row d-flex justify-content-center testimonial-pos">
+              <div class="col-md-12 pt-4 d-flex justify-content-center">
+                  <h3>Testimonials</h3>
+              </div>
+              <div class="col-md-12 d-flex justify-content-center">
+                  <h2>Explore the students experience</h2>
+              </div>
+          </div>
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="carousel-caption">
+                      <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code,
+                          I don't know what will.This was the very best explanation of frameworks for brginners 
+                          that I've ever seen.
+                      </p>
+                      <img src="assets/img/Adhisti_Roshandy.jpeg">
+                      <div id="image-caption">Adhisti Roshandy</div>
+                    </div>   
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code,
+                        I don't know what will.This was the very best explanation of frameworks for brginners 
+                        that I've ever seen.</p>
+                        <img src="assets/img/Fahmi_Alamsyah_N.jpg" class="img-fluid">
+                        <div id="image-caption">Fahmi Alamsyah</div>
+                    </div>   
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code,
+                        I don't know what will.This was the very best explanation of frameworks for brginners 
+                        that I've ever seen.</p>
+                        <img src="assets/img/Restuaji_Eliansyah.jpeg" class="img-fluid">
+                        <div id="image-caption">Restuaji Eliansyah</div>
+                    </div>   
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                  <i class='fas fa-arrow-left'></i>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                  <i class='fas fa-arrow-right'></i>
+                </a>
+              </div>
+              
+        </div>
+      </section>
+          <!-- About Us -->
+<div class="about-section" id="team">
     <h1>ABOUT US</h1>
     <p>Hello all, for all friends who want to learn about IT, 
       we provide online learning services in BRILIAN.ID .</p>
