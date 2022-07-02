@@ -322,6 +322,12 @@ i{
     color: #444;
     filter: invert(100%);
 }
+.testimonial-prev{
+  left: 0px;
+}
+.testimonial-next{
+  right:0px;
+}
         </style>
     </head>
     <body id="page-top" style="background-color:#F2F3F5;">
@@ -378,15 +384,15 @@ i{
           <div class="container my-5" id="courses">
 
           <!--Carousel Wrapper-->
-          <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+          <div id="multi-item" class="carousel slide carousel-multi-item" data-ride="carousel">
         
 
         
             <!--Indicators-->
             <ol class="carousel-indicators">
-              <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-              <li data-target="#multi-item-example" data-slide-to="1"></li>
-              <li data-target="#multi-item-example" data-slide-to="2"></li>
+              <li data-target="#multi-item" data-slide-to="0" class="active"></li>
+              <li data-target="#multi-item" data-slide-to="1"></li>
+              <li data-target="#multi-item" data-slide-to="2"></li>
             </ol>
             <!--/.Indicators-->
         
@@ -538,11 +544,11 @@ i{
               </div>
             </div>
             <!--/.Slides-->
-            <a class="carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#multi-item" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
+          <a class="carousel-control-next" href="#multi-item" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
           </a>
@@ -676,10 +682,10 @@ i{
                     </div>   
                   </div>
                 </div>
-                <a class="carousel-control-prev" href="#prev" data-slide="prev">
+                <a class="carousel-control-prev testimonial-prev" href="#slide" data-slide="prev">
                   <i class='fas fa-arrow-left' aria-hidden="true"></i>
                 </a>
-                <a class="carousel-control-next" href="#next" data-slide="next">
+                <a class="carousel-control-next testimonial-next" href="#slide" data-slide="next">
                   <i class='fas fa-arrow-right' aria-hidden="true"></i>
                 </a>
               </div>
