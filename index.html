@@ -176,13 +176,8 @@ html {
 .button:hover {
   background-color: #555;
 }
-.card-body {
-    background : whitesmoke;
-    box-shadow: 5px 5px 5px 0px rgb(102, 96, 96);
-}
-.card-img-top {
-    box-shadow: 5px 5px 5px 0px rgb(102, 96, 96);
-}
+
+
 @media screen and (max-width: 650px) {
   .column {
     width: 100%;
@@ -190,7 +185,7 @@ html {
   }
 }
 
-#demo{
+#slide{
     background: linear-gradient(112deg, #ffffff 50%, antiquewhite 50%);
     max-width: 900px;
     margin: auto;
@@ -279,6 +274,54 @@ i{
 .nav-link{
   font-size: 25px;
 }
+.carousel-item .card{
+    width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 15px;
+    padding: 1.5%;
+    box-sizing: border-box;
+    gap: 1rem;
+    flex: 1 1;
+    margin-bottom: 10px;
+}
+.carousel-item .card-img-top{
+    display: block;
+    width: 55%;
+    height: 55%;
+    background: #E6E7ED;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.carousel-indicators li {
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #c593d8;
+    border-radius: 50%;
+}
+
+.carousel-control-prev {
+    left: -110px;
+    border-bottom: 0;
+    font-size: 40px;
+    color: #444;
+    filter: invert(100%);
+}
+ 
+.carousel-control-next {
+    right: -110px;
+    border-bottom: 0;
+    font-size: 40px;
+    color: #444;
+    filter: invert(100%);
+}
         </style>
     </head>
     <body id="page-top" style="background-color:#F2F3F5;">
@@ -357,7 +400,7 @@ i{
                   <div class="col-md-4">
                     <div class="card mb-2">
                       <a href="Courses.html">
-                      <img class="card-img-top" src="assets/img/java.png"
+                      <img class="card-img-top mx-auto mt-4" src="assets/img/java.png"
                            alt="Card image cap">
                       </a>
                       <div class="card-body">
@@ -369,7 +412,7 @@ i{
                   <div class="col-md-4 clearfix d-none d-md-block">
                     <div class="card mb-2">
                       <a href="Courses.html">
-                      <img class="card-img-top" src="assets/img/javascript.png"
+                      <img class="card-img-top mx-auto mt-4" src="assets/img/javascript.png"
                            alt="Card image cap">
                       </a>
                       <div class="card-body">
@@ -382,7 +425,7 @@ i{
                   <div class="col-md-4 clearfix d-none d-md-block">
                     <div class="card mb-2">
                       <a href="Courses.html">
-                      <img class="card-img-top" src="assets/img/mysql.png"
+                      <img class="card-img-top mx-auto mt-4" src="assets/img/mysql.png"
                            alt="Card image cap">
                       </a>
                       <div class="card-body">
@@ -404,7 +447,7 @@ i{
                   <div class="col-md-4">
                     <div class="card mb-2">
                       <a href="Courses.html">
-                      <img class="card-img-top" src="assets/img/android.png"
+                      <img class="card-img-top mx-auto mt-4" src="assets/img/android.png"
                            alt="Card image cap">
                       </a>
                       <div class="card-body">
@@ -418,7 +461,7 @@ i{
                   <div class="col-md-4 clearfix d-none d-md-block">
                     <div class="card mb-2">
                       <a href="Courses.html">
-                      <img class="card-img-top" src="assets/img/codeigniter.png"
+                      <img class="card-img-top mx-auto mt-4" src="assets/img/codeigniter.png"
                            alt="Card image cap">
                       </a>
                       <div class="card-body">
@@ -432,7 +475,7 @@ i{
                   <div class="col-md-4 clearfix d-none d-md-block">
                     <div class="card mb-2">
                       <a href="Courses.html">
-                      <img class="card-img-top" src="assets/img/git.png"
+                      <img class="card-img-top mx-auto mt-4" src="assets/img/git.png"
                            alt="Card image cap">
                       </a>
                       <div class="card-body">
@@ -452,7 +495,7 @@ i{
                   <div class="col-md-4">
                     <div class="card mb-2">
                       <a href="Courses.html">
-                      <img class="card-img-top" src="assets/img/typescript.png"
+                      <img class="card-img-top mx-auto mt-4" src="assets/img/typescript.png"
                            alt="Card image cap">
                       </a>
                       <div class="card-body">
@@ -466,7 +509,7 @@ i{
                   <div class="col-md-4 clearfix d-none d-md-block">
                     <div class="card mb-2">
                       <a href="Courses.html">
-                      <img class="card-img-top" src="assets/img/html5.png"
+                      <img class="card-img-top mx-auto mt-4" src="assets/img/html5.png"
                            alt="Card image cap">
                       </a>
                       <div class="card-body">
@@ -480,7 +523,7 @@ i{
                   <div class="col-md-4 clearfix d-none d-md-block">
                     <div class="card mb-2">
                       <a href="Courses.html">
-                      <img class="card-img-top" src="assets/img/angularjs.png"
+                      <img class="card-img-top mx-auto mt-4" src="assets/img/angularjs.png"
                            alt="Card image cap">
                       </a>
                       <div class="card-body">
@@ -602,7 +645,7 @@ i{
                   <h2>Explore the students experience</h2>
               </div>
           </div>
-            <div id="demo" class="carousel slide" data-ride="carousel">
+            <div id="slide" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <div class="carousel-caption">
@@ -633,11 +676,11 @@ i{
                     </div>   
                   </div>
                 </div>
-                <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                  <i class='fas fa-arrow-left'></i>
+                <a class="carousel-control-prev" href="#prev" data-slide="prev">
+                  <i class='fas fa-arrow-left' aria-hidden="true"></i>
                 </a>
-                <a class="carousel-control-next" href="#demo" data-slide="next">
-                  <i class='fas fa-arrow-right'></i>
+                <a class="carousel-control-next" href="#next" data-slide="next">
+                  <i class='fas fa-arrow-right' aria-hidden="true"></i>
                 </a>
               </div>
               
