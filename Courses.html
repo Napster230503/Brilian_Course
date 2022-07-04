@@ -6,7 +6,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Brilian</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="assets/img/B.png" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Google fonts-->
@@ -21,6 +21,29 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <style>
+  
+    ul{
+    margin-right: 20px;
+  }
+    .footer-content i{
+    background-color: transparent;
+    padding: 0rem;
+  }
+  .footer-content .button{
+    background-color: #548CFF;
+    width: 300px;
+  }
+  .footer-content h3,p{
+    font-family: "Montserrat", sans-serif;
+  }
+  .footer-content h3{
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  .footer-content p{
+    margin-top: 30px;
+    font-size: 20px;
+  }
     .body{
     font-family: 'comic sans ms';
     }
@@ -55,6 +78,9 @@
     .nav-link{
   font-size: 25px;
 }
+html{
+  scroll-behavior: smooth;
+}
 </style>
     </head>
 <body style="background-color:#F2F3F5;">
@@ -63,7 +89,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg">
           <div class="container">
             <a class="navbar-brand" href="http://127.0.0.1:5500/index.html">
-              <img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+              <img src="assets/img/B.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
               Brilian
             </a>
           </div>
@@ -72,10 +98,10 @@
             <form class="container-fluid justify-content-end">
               <ul class="navbar-nav justify-content-end">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  <a class="nav-link" aria-current="page" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="Courses.html">Courses</a>
+                  <a class="nav-link active" href="Courses.html">Courses</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="Profile.html">Profile</a>
@@ -87,8 +113,8 @@
                   <a class="nav-link" href="Contact.html">Contact</a>
                 </li>
               </ul>
-              <a href="auth/login.html"><button class="btn btn-outline-success me-2 mr-3" type="button">Login</button></a>
-              <a href="auth/register.html"><button class="btn btn-primary me-2 " type="button">Sign Up</button></a>
+              <a href="auth/login.html"><button class="btn-lg btn-outline-success me-2 mr-3" type="button">Login</button></a>
+              <a href="auth/register.html"><button class="btn-lg btn-primary me-2 " type="button">Sign Up</button></a>
             </form>
           </nav>
         </header>

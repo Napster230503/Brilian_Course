@@ -6,7 +6,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Brilian</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="assets/img/B.png" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Google fonts-->
@@ -25,9 +25,27 @@
 <link rel="stylesheet" href="Footer_style.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-    .footer-content i{
+  .row{
+    margin: 30px;
+  }
+  .footer-content i{
     background-color: transparent;
     padding: 0rem;
+  }
+  .footer-content .button{
+    background-color: #548CFF;
+    width: 300px;
+  }
+  .footer-content h3,p{
+    font-family: "Montserrat", sans-serif;
+  }
+  .footer-content h3{
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  .footer-content p{
+    margin-top: 30px;
+    font-size: 20px;
   }
   html{
   scroll-behavior: smooth;
@@ -148,7 +166,7 @@ html {
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
+  margin-left: 8px;
 }
 
 .about-section {
@@ -179,14 +197,14 @@ html {
   display: inline-block;
   padding: 8px;
   color: white;
-  background-color: #000;
+  background-color: #162447;
   text-align: center;
   cursor: pointer;
   width: 100%;
 }
 
 .button:hover {
-  background-color: #555;
+  filter:brightness(130%);
 }
 
 
@@ -419,6 +437,12 @@ div.a{
         font-family: 'Mulish', sans-serif;
         text-align: justify;
     }
+    ul{
+    margin-right: 20px;
+  }
+  html{
+  scroll-behavior: smooth;
+}
 </style>
 
     </head>
@@ -428,7 +452,7 @@ div.a{
         <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg">
           <div class="container">
             <a class="navbar-brand" href="http://127.0.0.1:5500/index.html">
-              <img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+              <img src="assets/img/B.png" width="30" height="24" class="d-inline-block align-text-top">
               Brilian
             </a>
           </div>
@@ -438,7 +462,7 @@ div.a{
             <form class="container-fluid justify-content-end">
                 <ul class="navbar-nav justify-content-end">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                      <a class="nav-link" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="Courses.html">Courses</a>
@@ -447,7 +471,7 @@ div.a{
                       <a class="nav-link" href="Profile.html">Profile</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="team.html">Team</a>
+                      <a class="nav-link active" href="team.html">Team</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="Contact.html">Contact</a>
@@ -458,14 +482,9 @@ div.a{
             </form>
           </nav>
         </header>
-<div class="about-section" id="team">
-    <h1>ABOUT US</h1>
-    <p>Hello all, for all friends who want to learn about IT, 
-      we provide online learning services in BRILIAN.ID .</p>
-    <p>below are us as a team in the preparation of this website, THANK YOU :).</p>
-  </div>
+
   
-  <h2 style="text-align:center">Our Team</h2>
+  <h2 style="text-align:center; margin-top: 30px; font-size: 50px;"><b>Our Team</b></h2>
   <div class="row">
     <div class="column">
       <div class="card">
@@ -506,8 +525,8 @@ div.a{
   <!-- Footer -->
   <footer>
     <div class="footer-content">
-        <h3>Coding has never been easier</h3>
-        <a href="Courses.html"><button class="button" type="submit">Start Learning Now</button></a>
+        <h3><b>Coding has never been easier</b></h3>
+        <a href="Courses.html"><button class="button btn" type="submit">Start Learning Now</button></a>
         <p>Follow us on social media :</p>
         <ul class="socialmedia">
             <li><a href="#"><i class="fa fa-facebook"></i></a></li>

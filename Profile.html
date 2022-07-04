@@ -6,7 +6,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Brilian</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="assets/img/B.png" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Google fonts-->
@@ -25,9 +25,24 @@
 <link rel="stylesheet" href="Footer_style.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-    .footer-content i{
+  .footer-content i{
     background-color: transparent;
     padding: 0rem;
+  }
+  .footer-content .button{
+    background-color: #548CFF;
+    width: 300px;
+  }
+  .footer-content h3,p{
+    font-family: "Montserrat", sans-serif;
+  }
+  .footer-content h3{
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  .footer-content p{
+    margin-top: 30px;
+    font-size: 20px;
   }
   html{
   scroll-behavior: smooth;
@@ -186,9 +201,11 @@ html {
 }
 
 .button:hover {
-  background-color: #555;
+  filter:brightness(130%);
 }
-
+html{
+  scroll-behavior: smooth;
+}
 
 @media screen and (max-width: 650px) {
   .column {
@@ -419,16 +436,19 @@ div.a{
         font-family: 'Mulish', sans-serif;
         text-align: justify;
     }
+    ul{
+    margin-right: 20px;
+  }
 </style>
 
     </head>
-    <body id="page-top" style="background-color:#F2F3F5;">
+    <body id="page-top" style="background-color:#F2F3F5;" style="background-image: url('assets/img/background.png');">
       <!--Navbar-->
       <header class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg">
           <div class="container">
             <a class="navbar-brand" href="http://127.0.0.1:5500/index.html">
-              <img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+              <img src="assets/img/B.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
               Brilian
             </a>
           </div>
@@ -438,13 +458,13 @@ div.a{
             <form class="container-fluid justify-content-end">
                 <ul class="navbar-nav justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="Courses.html">Courses</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="Profile.html">Profile</a>
+                      <a class="nav-link active" href="Profile.html">Profile</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="team.html">Team</a>
@@ -459,8 +479,8 @@ div.a{
           </nav>
         </header>
 <div
-style="width: 70%; height: auto; position: relative; margin:auto; overflow: hidden; background-color: #B7D3DF; border-radius: 10px; padding : 10px 10px 10px 10px;" id="profile">
-<h2 style="text-align:center; font-family:'Mulish', sans-serif;">About Brilian Course</h2>
+style="width: 70%; height: auto; position: relative;margin-left: auto;margin-right: auto;margin-top: 60px;margin-bottom: 60px; overflow: hidden; background-color: #B7D3DF; border-radius: 10px; padding : 30px 30px 30px 30px;" id="profile">
+<h2 style="text-align:center; font-family:'Mulish', sans-serif;margin-bottom: 30px;"><b>About Brilian Course</b></h2>
 <img src="assets/img/companyprofile.jpg" style="width: 40%; margin-left:10px; margin-right:10px; float:left;">
 <div class="Lock">
     <p>
@@ -498,8 +518,8 @@ style="width: 70%; height: auto; position: relative; margin:auto; overflow: hidd
   <!-- Footer -->
   <footer>
     <div class="footer-content">
-        <h3>Coding has never been easier</h3>
-        <a href="Courses.html"><button class="button" type="submit">Start Learning Now</button></a>
+        <h3><b>Coding has never been easier</b></h3>
+        <a href="Courses.html"><button class="button btn" type="submit">Start Learning Now</button></a>
         <p>Follow us on social media :</p>
         <ul class="socialmedia">
             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
