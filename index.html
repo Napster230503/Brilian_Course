@@ -22,8 +22,12 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        
+<link rel="stylesheet" href="Footer_style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+  html{
+  scroll-behavior: smooth;
+}
 .title-word {
   animation: color-animation 4s linear infinite;
 }
@@ -266,7 +270,9 @@ i{
 .home-testimonial{
   background-color: #231834;
   height: 690px}
-
+.why-code{
+  background-color: white;
+}
 .home-testimonial h3{
   color: white;
   font-size: 14px;
@@ -348,6 +354,67 @@ div.a{
         font-family: 'comic sans ms';
         font-size: larger;
    }
+
+   * {
+      box-sizing: border-box;
+    }
+    
+    /* Style untuk inputs */
+    .contact input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    
+    .contact input[type=submit] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .contact input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    
+    /* Style untuk bagian container/contact  */
+    .contact .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+    
+    /* Buat dua kolom yang berfloat di samping satu sama lain */
+    .contact .column {
+      float: left;
+      width: 50%;
+      margin-top: 6px;
+      padding: 20px;
+    }
+    
+    /* Hapus floats setelah columns */
+    .contact .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Responsive layout -ketika layar kurang dari 600px lebarnya, buat dua kolom bertumpuk satu sama lain, bukan di samping satu sama lain */
+    @media screen and (max-width: 600px) {
+      .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+    .Lock {
+        margin-left: 10px;
+        font-family: 'Mulish', sans-serif;
+        text-align: justify;
+    }
 </style>
 
     </head>
@@ -379,7 +446,7 @@ div.a{
                   <a class="nav-link" href="index.html#team">Team</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html#team">Contact</a>
+                  <a class="nav-link" href="index.html#contact">Contact</a>
                 </li>
               </ul>
               <a href="auth/login.html"><button class="btn btn-outline-success me-2 mr-3" type="button">Login</button></a>
@@ -575,7 +642,6 @@ div.a{
           </a>
           </div>
           <!--/.Carousel Wrapper-->
-        
         </div>
           <!-- <div class="card" style="width: 18rem;">
             <img src="..." class="card-img-top" alt="...">
@@ -645,14 +711,15 @@ div.a{
                                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                                 <a href="https://play.google.com/store/games?utm_source=apac_med&utm_medium=hasem&utm_content=Aug2021&utm_campaign=Evergreen&pcampaignid=MKT-EDR-apac-id-1003227-med-hasem-py-Evergreen-Aug2021-Text_Search_BKWS-BKWS%7CONSEM_kwid_43700065961766560_creativeid_541258268578_device_c&gclid=Cj0KCQjwtvqVBhCVARIsAFUxcRu2ju9RYnVrMwwMGQu29F6EgluUSefcR7JyO4FFDhdAk6Pi4WFb-G0aAkeEEALw_wcB&gclsrc=aw.ds"></a>
                                   <div class="Playstore1">
-                                    <img class="playstore" src="https://www.logo.wine/a/logo/Google_Play/Google_Play-Badge-Logo.wine.svg" alt="Playstore" ></a>
+                                    <img class="playstore" src="https://www.logo.wine/a/logo/Google_Play/Google_Play-Badge-Logo.wine.svg" alt="Playstore" style="width: 200px; height:100px;"></a>
+                                    <a href= "https://www.apple.com/app-store/"><img class="appstore" src="assets/img/appstore.png" alt="" style="width:180px;  height:45px;"></a>
                                   </div>
                                 </div>
                           </div>
                           </div>
                     </div>    
                     </div>
-                <div class="col-4 col-md-4 col-lg-4">
+                <div class="col-4 col-md-4 col-lg-4 d-flex justify-content-center">
                     <div class="card text-center" style="width: 18rem;">
                         <img src="assets/img/skills.png" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -665,9 +732,48 @@ div.a{
         </div>
      </div>
 
+<!-- profile -->
 
+<div
+style="width: 70%; height: auto; position: relative; margin:auto; overflow: hidden; background-color: #B7D3DF; border-radius: 10px; padding : 10px 10px 10px 10px;" id="profile">
+<h2 style="text-align:center; font-family:'Mulish', sans-serif;">About Brilian Course</h2>
+<img src="assets/img/companyprofile.jpg" style="width: 40%; margin-left:10px; margin-right:10px; float:left;">
+<div class="Lock">
+    <p>
+        The monitoring post for sacrificial animals in Salatiga City which is open from
+        Monday (27/6/2022) there are still no fans. First day no owner
+        sacrificial animal who examines his sacrificial animal.
+        Head of the Food and Agriculture Service (Dispangtan) of Salatiga City
+        Henni Mulyani said the checkpoint was opened in front of Kebun Noborejo,
+        which is the entrance to Salatiga City. "Besides the check points, there are also
+        livestock traffic control area.
+    </p>
+    <p>
+        The place is located at three points, namely Blotongan,
+        Kecandran and Tingkir," he explained. Henni said the examination of the sacrificial animals
+        it is free of charge. "Please check here,
+        this is free. If the animal is healthy and there is no indication of disease
+        mouth and nails (PMK), an animal health certificate will be issued
+        (SKKH)," he explained.
+    </p>
+    <p>
+        It is said, the post that was opened at this time was due to time considerations.
+        So that if there are animals that are indicated as PMK, they can be handled immediately
+        and treated. "There are still about 14 days for treatment.
+        So if PMK is indicated, later on Eid al-Adha,
+        the sacrificial animals are in good health," said Henni.
+        "If we are checked in a short time, we are worried that we will not be healthy
+        ahead of Eid al-Adha, and this has an impact on the health conditions of animals and animals
+        when slaughtering," he added. Henni added, because it was still quiet
+        enthusiasts who check the sacrificial animals, then the Dispangtan of Salatiga City
+        move actively to farmers and collectors. "Socialize about check points and
+        We will continue to carry out veterinary checks," he said.
+    </p>
+</div>
+</div>
 <!--Why Code-->
      <br><br>
+<section class="why-code">
      <div class="a">
          <h1><center>Why Code</center></h1>
      </div>
@@ -688,14 +794,14 @@ div.a{
          and making something new everyday!</p3>
  
  </div>
- 
+ <br>
  <div class="Image_1">
      <center>
          <img src="assets/img/home-why-code-1.jpg" alt="Image_1" style="width:50%; height: 30%;">
      </center>
  </div>
  <br>
-
+</section>
           <!-- Testimonial -->
       <section class="home-testimonial">
           <div class="container">
@@ -739,35 +845,16 @@ div.a{
                   </div>
                 </div>
                 <a class="carousel-control-prev testimonial-prev" href="#slide" data-slide="prev">
-                  <i class='fas fa-arrow-left' aria-hidden="true"></i>
+                  <i class='fas carousel-control-prev-icon' aria-hidden="true"></i>
                 </a>
                 <a class="carousel-control-next testimonial-next" href="#slide" data-slide="next">
-                  <i class='fas fa-arrow-right' aria-hidden="true"></i>
+                  <i class='fas carousel-control-next-icon' aria-hidden="true"></i>
                 </a>
               </div>
               
         </div>
       </section>
-      <!-- Footer -->
-      <footer>
-        <br><br><br><br>
-        <div class="footer-content">
-            <h3>Coding has never been easier</h3>
-            <button class="button" type="submit">Start Learning Now</button>
-            <p>Follow us on social media :</p>
-            <ul class="socialmedia">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-            </ul>
-        </div>
-        <div class="footer-bottom">
-            <p>Copyright &copy;2022 Brilian Course. design by Group 3<span></span></p>
-        </div>
-    </footer>
+
           <!-- About Us -->
 <div class="about-section" id="team">
     <h1>ABOUT US</h1>
@@ -785,7 +872,7 @@ div.a{
           <h3>Adhisti Roshandy</h3>
           <p class="titlecard">Students from CCIT-FTUI</p>
           <p>adhistiroshandy808@gmail.com</p>
-          <p><button class="button">Contact Us</button></p>
+          <a href="mailto:adhistiroshandy808@gmail.com"><p><button class="button">Contact Us</button></p></a>
         </div>
       </div>
     </div>
@@ -797,7 +884,7 @@ div.a{
           <h3>Fahmi Alamsyah Nugroho</h3>
           <p class="titlecard">Students from CCIT-FTUI</p>
           <p>alamsyahfahmi99@gmail.com</p>
-          <p><button class="button">Contact Us</button></p>
+          <a href="mailto:alamsyahfahmi99@gmail.com"><p><button class="button">Contact Us</button></p></a>
         </div>
       </div>
     </div>
@@ -809,12 +896,62 @@ div.a{
           <h3>Restuaji Eliansyah</h3>
           <p class="titlecard">Students from CCIT-FTUI</p>
           <p>restuaerestu291@gmail.com</p>
-          <p><button class="button">Contact Us</button></p>
+          <a href="mailto:restuaerestu291@gmail.com"><p><button class="button">Contact Us</button></p></a>
         </div>
       </div>
     </div>
   </div>
-  
+  <!-- contact -->
+<div class="contact" id="contact">
+  <div class="container">
+    <div style="text-align:center">
+      <h2>Contact Us</h2>
+      <p>You can contact us if you have any questions about BRILLIANT.ID</p>
+    </div>
+    <div class="row">
+      <div class="column">
+        <img src="assets/img/Logo_ContactUs.png" style="width:100%">
+      </div>
+      <div class="column">
+        <form action="/action_page.php">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          <label for="country">Negara</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Indonesia</option>
+            <option value="usa">USA</option>
+          </select>
+          <label for="subject">Subjek</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+        <h3>Coding has never been easier</h3>
+        <a href="Courses.html"><button class="button" type="submit">Start Learning Now</button></a>
+        <p>Follow us on social media :</p>
+        <ul class="socialmedia">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright &copy;2022 Brilian Course. design by Group 3<span></span></p>
+    </div>
+</footer>
 
   
           <script>
