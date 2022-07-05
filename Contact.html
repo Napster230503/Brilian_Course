@@ -492,18 +492,28 @@ div.a{
         <img src="assets/img/contact.png" style="width:100%">
       </div>
       <div class="column">
-        <form action="/action_page.php" class="border border-dark " style="padding:20px">
+        <form class="border border-dark form-group" style="padding:20px">
           <label for="fname">Name</label>
-          <input type="text" id="fname" name="Name" placeholder="Add your name">
-
+          <input type="text" id="fname" name="Name" placeholder="Add your name" required>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">
+            Please provide a valid Email.
+          </div>
           
           <label for="E-mail">E-mail</label>
-          <input type="text" id="femail" name="E-mail"placeholder="Add your E-mail">
-
+          <input type="text" id="femail" name="E-mail"placeholder="Add your E-mail" required>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">
+            Please provide a valid Email.
+          </div>
           
           <label for="Massage">Massage</label>
-          <textarea id="Massage" name="Massage" placeholder="Add some Massage" style="height:170px"></textarea>
-          <center><input type="submit" value="Send Message" style="background-color: #162447"></center>
+          <textarea id="Massage" name="Massage" placeholder="Add some Massage" style="height:170px" required></textarea>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">
+            Please provide a valid Email.
+          </div>
+          <center><input type="submit" value="Send Message" style="background-color: #162447" id="submit"></center>
         </form>
       </div>
     </div>
@@ -533,21 +543,41 @@ div.a{
 
   
           <script>
-            var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-var alertTrigger = document.getElementById('liveAlertBtn')
+(() => {
+  'use strict';
+  const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+  const forms = document.querySelectorAll('.needs-validation');
 
-function alert(message, type) {
-  var wrapper = document.createElement('div')
-  wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+  const alert = (message, type) => {
+  const wrapper = document.createElement('div')
+  wrapper.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    `   <div>${message}</div>`,
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    '</div>'
+  ].join('')
 
   alertPlaceholder.append(wrapper)
 }
 
-if (alertTrigger) {
-  alertTrigger.addEventListener('click', function () {
-    alert('Nice, you triggered this alert message!', 'success')
-  })
-}
+const alertTrigger = document.getElementById('submit')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms).forEach((form) => {
+    form.addEventListener('submit', (event) => {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      else if(form.checkValidity()){
+        alertTrigger.addEventListener('click', () => {
+        alert('Login Successfully!', 'success')
+  });
+      }
+      form.classList.add('was-validated');
+    }, false);
+  });
+})();
           </script>
     </body>
 </html>
